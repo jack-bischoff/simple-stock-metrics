@@ -2,19 +2,18 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-import Home from '../views/Home';
 
-class AppComponent extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <div>
-          <Home />
+          <h1>Hello World!</h1>
       </div>
     );
   }
 }
 
-AppComponent.defaultProps = {
+Home.defaultProps = {
 };
 
-export default AppComponent;
+export default Home;
