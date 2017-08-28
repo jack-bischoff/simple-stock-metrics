@@ -6,5 +6,5 @@ export default {
   apiKey : '37QK7P1G8KTJ31ZA',
 
   // Eventually this URL will be split up
-  apiBaseURL : 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AMD&interval=1min'
+  apiBaseURL : 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY'
 }

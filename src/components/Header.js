@@ -9,7 +9,10 @@ class Header extends React.Component {
     return (
       <div className="uk-section uk-section-primary uk-light">
         <div className="uk-container">
-          <h1 className="uk-heading-primary uk-margin-remove-bottom">{this.props.metadata['2. Symbol']}</h1>
+          <h1 className="uk-heading-primary uk-margin-remove-bottom uk-display-inline-block">{this.props.metadata['2. Symbol']}</h1>
+          <input className="uk-input uk-display-inline-block uk-width-1-6 uk-float-right" placeholder="Symbol" onKeyPress={(e) => {
+            this.props.handleSubmit(e)
+          }}/>
           <p className="uk-text-meta uk-margin-remove-top">{this.props.metadata['6. Time Zone']}</p>
           <hr/>
 
