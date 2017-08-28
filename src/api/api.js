@@ -1,14 +1,12 @@
-import axios from 'axios';
-
 'use strict';
 
 import axios from 'axios';
 import config from '../config/base';
 
 export default {
-    getDemoData() {
-        let url = `${config.apiBaseURL}`;
+  getDemoData() {
+    let url = `${config.apiBaseURL}&apikey=${config.apiKey}`;
 
-        return axios.get(url);
-    }
+    return axios.get(url);
+  }
 }
