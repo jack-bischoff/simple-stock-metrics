@@ -18,16 +18,16 @@ class Header extends React.Component {
 
           <div className="uk-text-center">
             <p className="uk-display-inline-block uk-text-large">
-              <span className="uk-text-meta uk-margin-right">Opening:</span>{'$'}{this.props.timeseries['2017-08-25 16:00:00']['1. open']}
+              <span className="uk-text-meta uk-margin-right">Opening:</span>{'$'}{this.props.timeseries['2017-08-28 16:00:00']['1. open']}
             </p>
             <p className="uk-display-inline-block uk-text-large">
-              <span className="uk-text-meta uk-margin-right uk-margin-large-left">Closing:</span>{'$'}{this.props.timeseries['2017-08-25 16:00:00']['4. close']}
+              <span className="uk-text-meta uk-margin-right uk-margin-large-left">Closing:</span>{'$'}{this.props.timeseries['2017-08-28 16:00:00']['4. close']}
             </p>
             <p className="uk-display-inline-block uk-margin-large-left uk-text-large">
-              <span className="uk-text-meta uk-margin-right">High:</span>{'$'}{this.props.timeseries['2017-08-25 16:00:00']['2. high']}
+              <span className="uk-text-meta uk-margin-right">High:</span>{'$'}{this.props.timeseries['2017-08-28 16:00:00']['2. high']}
             </p>
             <p className="uk-display-inline-block uk-margin-large-left uk-text-large">
-              <span className="uk-text-meta uk-margin-right">Low:</span>{'$'}{this.props.timeseries['2017-08-25 16:00:00']['3. low']}
+              <span className="uk-text-meta uk-margin-right">Low:</span>{'$'}{this.props.timeseries['2017-08-28 16:00:00']['3. low']}
             </p>
           </div>
         </div>
