@@ -44,7 +44,7 @@ class Chart extends React.Component {
 Chart.propTypes = {
   labels: PropTypes.array,
   datasets: PropTypes.array,
-  label: PropTypes.string
+  title: PropTypes.string
 }
 
 Chart.defaultProps = {

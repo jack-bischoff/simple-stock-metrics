@@ -62,7 +62,6 @@ class Home extends React.Component {
   }
 
   handleSymbolSearch(event) {
-    console.log('called handle symbol search callback')
     if (event.key === 'Enter') {
       console.log('Fetching data by symbol: ' + event.target.value)
       api.getDataBySymbol(event.target.value).then(res => {
