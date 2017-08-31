@@ -23,6 +23,7 @@ class Home extends React.Component {
 
   componentWillMount() {
     api.getDemoData().then(res => {
+      console.log(res.data);
       // Compute the necessary data to pass to chart.js
       this.computeDataSets(res.data['Time Series (1min)']);
 
@@ -43,7 +44,7 @@ class Home extends React.Component {
     var data = [];
     for (var i = 0; i < labels.length; i++) {
       // Add the closing price to the graph data
-      data.push(obj[labels[i]]['4. close'])
+      data.push(obj[labels[i]]['4. close']);
     }
 
     var datasets = [];

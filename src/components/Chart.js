@@ -26,20 +26,16 @@ class Chart extends React.Component {
       datasets: datasets
     };
 
-    console.log(data);
-
     this.setState({data: data});
   }
 
   render() {
     return (
-      <div className="uk-section">
-        <div className="uk-container">
-          <h1 className="uk-text-center uk-heading-line">
-            <span>{this.props.title}</span>
-          </h1>
-          <Line data={this.state.data}/>
-        </div>
+      <div>
+        <h1 className="uk-text-center uk-heading-line uk-margin-remove-top">
+          <span>{this.props.title}</span>
+        </h1>
+        <Line data={this.state.data}/>
       </div>
     );
   }

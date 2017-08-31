@@ -4,6 +4,7 @@ import axios from 'axios';
 import config from '../config/base';
 
 export default {
+  // Alpha Vantage API
   getDemoData() {
     let url = `${config.apiBaseURL}?function=${config.timeSeriesIntraday}&symbol=AMD&interval=1min&apikey=${config.apiKey}`;
 
@@ -33,4 +34,6 @@ export default {
 
     return axios.get(url);
   }
+
+  // FullContact API
 }
