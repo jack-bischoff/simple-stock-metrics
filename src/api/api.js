@@ -1,14 +1,36 @@
-import axios from 'axios';
-
 'use strict';
 
 import axios from 'axios';
 import config from '../config/base';
 
 export default {
-    getDemoData() {
-        let url = `${config.apiBaseURL}`;
+  getDemoData() {
+    let url = `${config.apiBaseURL}?function=${config.timeSeriesIntraday}&symbol=AMD&interval=1min&apikey=${config.apiKey}`;
 
-        return axios.get(url);
-    }
+    return axios.get(url);
+  },
+
+  getDataBySymbol(symbol) {
+    let url = `${config.apiBaseURL}?function=${config.timeSeriesIntraday}&symbol=${symbol}&interval=1min&apikey=${config.apiKey}`;
+
+    return axios.get(url);
+  },
+
+  getHistorialDataBySymbol(symbol) {
+    let url = `${config.apiBaseURL}?function=${config.timeSeriesDaily}&symbol=${symbol}&outputsize=full&interval=1min&apikey=${config.apiKey}`;
+
+    return axios.get(url);
+  },
+
+  getWeeklyDataBySymbol(symbol) {
+    let url = `${config.apiBaseURL}?function=${config.timeSeriesWeekly}&symbol=${symbol}&outputsize=full&interval=1min&apikey=${config.apiKey}`;
+
+    return axios.get(url);
+  },
+
+  getMonthlyDataBySymbol(symbol) {
+    let url = `${config.apiBaseURL}?function=${config.timeSeriesMonthly}&symbol=${symbol}&outputsize=full&interval=1min&apikey=${config.apiKey}`;
+
+    return axios.get(url);
+  }
 }

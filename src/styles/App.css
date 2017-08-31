@@ -1,1 +1,48 @@
 /* Base Application Styles */
+
+body {
+    font-family: 'Lato';
+}
+
+.uk-heading-hero {
+    font-family: 'Lato';
+    font-weight: 400 !important;
+}
+
+.uk-heading {
+    font-famiy: 'Lato';
+}
+
+.uk-text-dark {
+    color: #4d4d4d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato' !important;
+    font-weight: 900 !important;
+}
+
+.uk-background-cd {
+    background-color: #00AEEf;
+}
+
+.uk-navbar-nav > li > a {
+    font-family: 'Lato' !important;
+    font-weight: 400 !important;
+}
+
+.list-view {
+    background-color: #01b48f;
+}
+
+.detail-view {
+    background-color: #f5f7f9;
+}
+
+.uk-tile-blue-light {
+    background-color: #01b48f;
+}
+
+.uk-input {
+    border-radius: 3px !important;
+}
