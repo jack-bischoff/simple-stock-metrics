@@ -23,7 +23,6 @@ class Home extends React.Component {
 
   componentWillMount() {
     api.getDemoData().then(res => {
-
       // Compute the necessary data to pass to chart.js
       this.computeDataSets(res.data['Time Series (1min)']);
 
@@ -43,13 +42,16 @@ class Home extends React.Component {
     // Compute datasets for chart
     var data = [];
     for (var i = 0; i < labels.length; i++) {
+      // Add the closing price to the graph data
       data.push(obj[labels[i]]['4. close'])
     }
+
     var datasets = [];
     var dataset = {
-      fillColor: 'rgba(0,0,0,0)',
-      strokeColor: 'rgba(220,180,0,1)',
-      pointColor: 'rgba(220,180,0,1)',
+      borderColor: '#1e87f0',
+      backgroundColor: 'rgba(0,0,0,0)',
+      pointBackgroundColor: '#1e87f0',
+      label: 'Share Prices',
       data: data
     };
     datasets.push(dataset);
@@ -75,8 +77,9 @@ class Home extends React.Component {
       return (
         <div>
           <Header timeseries={this.state.timeseries} metadata={this.state.metadata} handleSubmit={this.handleSymbolSearch}/>
+          <ChartWrapper labels={this.state.labels} datasets={this.state.datasets} chartTitle={'Stock Performance'}/>
           <Metadata metadata={this.state.metadata}/>
-          <ChartWrapper labels={this.state.labels} datasets={this.state.datasets}/>
+          <ChartWrapper labels={this.state.labels} datasets={this.state.datasets} chartTitle={'Historal Data'}/>
         </div>
       );
     } else {

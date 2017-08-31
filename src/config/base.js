@@ -6,5 +6,12 @@ export default {
   apiKey : '37QK7P1G8KTJ31ZA',
 
   // Eventually this URL will be split up
-  apiBaseURL : 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY'
+  apiBaseURL : 'https://www.alphavantage.co/query',
+
+  // API Time Series settings
+  timeSeriesDaily : 'TIME_SERIES_DAILY',
+  timeSeriesIntraday : 'TIME_SERIES_INTRADAY',
+  timeSeriesDailyAdjusted : 'TIME_SERIES_DAILY_ADJUSTED',
+  timeSeriesWeekly : 'TIME_SERIES_WEEKLY',
+  timeSeriesMonthly : 'TIME_SERIES_MONTHLY'
 }

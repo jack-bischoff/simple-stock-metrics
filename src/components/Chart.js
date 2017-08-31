@@ -35,7 +35,9 @@ class Chart extends React.Component {
     return (
       <div className="uk-section">
         <div className="uk-container">
-          <h1>Share History</h1>
+          <h1 className="uk-text-center uk-heading-line">
+            <span>{this.props.title}</span>
+          </h1>
           <Line data={this.state.data}/>
         </div>
       </div>
@@ -45,12 +47,14 @@ class Chart extends React.Component {
 
 Chart.propTypes = {
   labels: PropTypes.array,
-  datasets: PropTypes.array
+  datasets: PropTypes.array,
+  label: PropTypes.string
 }
 
 Chart.defaultProps = {
   labels: [],
-  datasets: []
+  datasets: [],
+  title: ''
 }
 
 export default Chart;
