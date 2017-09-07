@@ -2,6 +2,7 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import api from '../api/api';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
@@ -23,7 +24,6 @@ class Home extends React.Component {
 
   componentWillMount() {
     api.getDemoData().then(res => {
-      console.log(res);
       // Compute the necessary data to pass to chart.js
       this.computeDataSets(res.data['Time Series (1min)']);
 
@@ -76,7 +76,7 @@ class Home extends React.Component {
     if (this.state.timeseries) {
       return (
         <div>
-          <Header timeseries={this.state.timeseries} metadata={this.state.metadata} handleSubmit={this.handleSymbolSearch}/>
+          <Header timeseries={this.state.timeseries} metadata={this.state.metadata} handleSubmit={this.handleSymbolSearch} user={this.props.user}/>
           <ChartWrapper labels={this.state.labels} datasets={this.state.datasets} chartTitle={'Stock Performance'}/>
           <Metadata metadata={this.state.metadata}/>
           <ChartWrapper labels={this.state.labels} datasets={this.state.datasets} chartTitle={'Historal Data'}/>
@@ -88,6 +88,11 @@ class Home extends React.Component {
   }
 }
 
-Home.defaultProps = {};
+Home.propTypes = {
+  user: PropTypes.object
+};
+Home.defaultProps = {
+  user: null
+};
 
 export default Home;

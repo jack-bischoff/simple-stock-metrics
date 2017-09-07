@@ -18,5 +18,6 @@ export default {
   timeSeriesMonthly : 'TIME_SERIES_MONTHLY',
 
   // Slack Oauth Config
-  slackOauthURL : `https://slack.com/oauth/authorize?scope=identity.basic&client_id=${keys.slackClientID}&redirect_uri=http%3A%2F%2Flocalhost%3A8000`
+  slackOauthURL : `https://slack.com/oauth/authorize?scope=identity.basic&client_id=${keys.slackClientID}&redirect_uri=http%3A%2F%2Flocalhost%3A8000`,
+  slackOauthAccessURL : `https://slack.com/api/oauth.access?client_id=${keys.slackClientID}&client_secret=${keys.slackClientSecret}`
 }

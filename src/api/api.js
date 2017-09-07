@@ -33,7 +33,16 @@ export default {
     let url = `${config.apiBaseURL}?function=${config.timeSeriesMonthly}&symbol=${symbol}&outputsize=full&interval=1min&apikey=${config.apiKey}`;
 
     return axios.get(url);
-  }
+  },
 
   // FullContact API
+
+  // Slack OAuth API
+  getUserInfo(code) {
+    let url = `${config.slackOauthAccessURL}&code=${code}&redirect_uri=http%3A%2F%2Flocalhost%3A8000`
+
+    console.log(url);
+
+    return axios.get(url);
+  }
 }

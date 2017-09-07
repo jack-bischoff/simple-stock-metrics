@@ -13,7 +13,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className="uk-section uk-section-primary uk-padding-remove-top">
-        <Navbar/>
+        <Navbar user={this.props.user}/>
         <div className="uk-container uk-light">
           <h1 className="uk-heading-primary uk-margin-remove-bottom uk-display-inline-block">{this.props.metadata['2. Symbol']}</h1>
           <input className="uk-input uk-display-inline-block uk-width-1-6 uk-float-right" placeholder="Symbol" onKeyPress={(e) => {
@@ -44,12 +44,14 @@ class Header extends React.Component {
 
 Header.propTypes = {
   timeseries: PropTypes.object,
-  metadata: PropTypes.object
+  metadata: PropTypes.object,
+  user: PropTypes.object
 };
 
 Header.defaultProps = {
   timeseries: null,
-  metadata: null
+  metadata: null,
+  user: null
 };
 
 export default Header;

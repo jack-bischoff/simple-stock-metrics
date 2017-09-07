@@ -12,6 +12,7 @@ class Navbar extends React.Component {
   }
 
   render() {
+    console.log(this.props.user);
     return (
       <nav className="uk-navbar-container uk-navbar-transparent uk-margin-medium-bottom navbar-divider" data-uk-navbar>
         <div className="uk-navbar-left">
@@ -47,6 +48,8 @@ Navbar.propTypes = {
   user: PropTypes.object
 }
 
-Navbar.defaultProps = {}
+Navbar.defaultProps = {
+  user: {}
+}
 
 export default Navbar;
