@@ -10,3 +10,17 @@ npm install
 ```
 npm run start
 ```
+
+## Configuration
+In the `src/config` directory you will need to create a file called `keys.js` which will look something like this:
+```javascript
+'use strict';
+
+// Important API keys that should be kept secret
+export default {
+  alphaVantageKey : '{my_key}',
+  slackClientID : '{my_key}'
+};
+
+```
+It will hold all special API keys that should be kept secret

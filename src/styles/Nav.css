@@ -1,0 +1,13 @@
+.uk-button {
+    border-radius: 3px !important;
+}
+
+.navbar-divider {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.tm-login-button {
+    border-radius: 500px !important;
+    border-color: rgba(255,255,255,0.6) !important;
+    color: rgba(255,255,255,0.6) !important;
+}

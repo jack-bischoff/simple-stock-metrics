@@ -35,3 +35,6 @@ bower_components/
 .DS_Store
 
 dist
+
+# Ignore config file containing API keys
+src/config/keys.js

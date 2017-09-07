@@ -23,7 +23,7 @@ class Home extends React.Component {
 
   componentWillMount() {
     api.getDemoData().then(res => {
-      console.log(res.data);
+      console.log(res);
       // Compute the necessary data to pass to chart.js
       this.computeDataSets(res.data['Time Series (1min)']);
 

@@ -1,5 +1,7 @@
 'use strict';
 
+import keys from './keys';
+
 // Settings configured here will be merged into the final config object.
 export default {
   // This should probably be pulled from an env variable
@@ -13,5 +15,8 @@ export default {
   timeSeriesIntraday : 'TIME_SERIES_INTRADAY',
   timeSeriesDailyAdjusted : 'TIME_SERIES_DAILY_ADJUSTED',
   timeSeriesWeekly : 'TIME_SERIES_WEEKLY',
-  timeSeriesMonthly : 'TIME_SERIES_MONTHLY'
+  timeSeriesMonthly : 'TIME_SERIES_MONTHLY',
+
+  // Slack Oauth Config
+  slackOauthURL : `https://slack.com/oauth/authorize?scope=identity.basic&client_id=${keys.slackClientID}&redirect_uri=http%3A%2F%2Flocalhost%3A8000`
 }
