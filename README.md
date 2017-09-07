@@ -18,9 +18,10 @@ In the `src/config` directory you will need to create a file called `keys.js` wh
 
 // Important API keys that should be kept secret
 export default {
-  alphaVantageKey : '{my_key}',
-  slackClientID : '{my_key}'
+  alphaVantageKey : '',
+  slackClientID : '',
+  slackClientSecret : ''
 };
 
 ```
-It will hold all special API keys that should be kept secret
+It will hold all special API keys that should be kept secret. If this is not filled out properly the app will not function.
