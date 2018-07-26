@@ -26,7 +26,7 @@ Loading.propTypes = {
 }
 
 Loading.defaultProps = {
-  message: 'Shaving Yaks...'
+  message: 'Loading...'
 }
 
 export default Loading;

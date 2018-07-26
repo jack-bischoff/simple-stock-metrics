@@ -3,7 +3,9 @@ require('styles/Chart.css');
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Line} from 'react-chartjs-2';
+import {
+  Line
+} from 'react-chartjs-2';
 
 class Chart extends React.Component {
   constructor(props) {
@@ -26,7 +28,9 @@ class Chart extends React.Component {
       datasets: datasets
     };
 
-    this.setState({data: data});
+    this.setState({
+      data: data
+    });
   }
 
   render() {
