@@ -3,6 +3,7 @@ require('styles/App.css');
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import About from './About';
 
 class Metadata extends React.Component {
   constructor(props) {
@@ -11,9 +12,20 @@ class Metadata extends React.Component {
 
   render() {
     return (
-      <div className="uk-section uk-section-muted">
+      <div className="uk-section uk-section-default uk-padding-remove-top">
         <div className="uk-container">
-          <h1 className="uk-text-center">{'Meta Data'}</h1>
+          <h2 className="text-highlighted">{'$'}{this.props.metadata.latestPrice}</h2>
+          <div className="uk-grid-divider uk-flex-center uk-text-center uk-grid-large" data-uk-grid>
+              <div>
+                  <h3 className="">{'Open'}</h3>
+                  <p className="text-highlighted uk-text-small">{'$'}{this.props.metadata.open}</p>
+              </div>
+              <div>
+                  <h3 className="">{'Low'}</h3>
+                  <p className="text-highlighted uk-text-small">{'$'}{this.props.metadata.low}</p>
+              </div>
+          </div>
+          <About metadata={this.props.company}/>
         </div>
       </div>
     );
@@ -21,11 +33,13 @@ class Metadata extends React.Component {
 }
 
 Metadata.propTypes = {
-  metadata: PropTypes.object
+  metadata: PropTypes.object,
+  company: PropTypes.object
 };
 
 Metadata.defaultProps = {
-  metadata: null
+  metadata: null,
+  company: null
 };
 
 export default Metadata;

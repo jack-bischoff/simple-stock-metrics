@@ -11,7 +11,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="uk-section uk-padding-remove-top uk-margin-medium-top">
+      <div className="uk-section uk-padding-remove-top uk-padding-remove-bottom uk-margin-medium-top">
         <div className="uk-container uk-dark">
           <div className="uk-margin-bottom uk-margin-remove-top">
             <span className="label-soft uk-margin-small-right">Sector: {this.props.company.sector}</span>

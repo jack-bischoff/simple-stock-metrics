@@ -14,7 +14,8 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-      company: {}
+      company: {},
+      metadata: null
     };
 
     this.handleSymbolSearch = this.handleSymbolSearch.bind(this);
@@ -37,17 +38,21 @@ class Home extends React.Component {
           company: res.data
         });
       })
-      event.target.reset();
+      api.getQuoteData(event.target.value).then(res => {
+        console.log(res.data);
+        this.setState({
+          metadata: res.data
+        });
+      })
     }
   }
 
   render() {
-    if (this.state.timeseries) {
+    if (this.state.metadata) {
       return (
         <div>
-          <ChartWrapper labels={this.state.labels} datasets={this.state.datasets} chartTitle={'Stock Performance'}/>
-          <Metadata metadata={this.state.metadata}/>
-          <ChartWrapper labels={this.state.labels} datasets={this.state.datasets} chartTitle={'Historal Data'}/>
+          <Header company={this.state.company} handleSubmit={this.handleSymbolSearch}/>
+          <Metadata company={this.state.company} metadata={this.state.metadata}/>
         </div>
       );
     } else {
