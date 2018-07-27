@@ -15,7 +15,9 @@ class Home extends React.Component {
 
     this.state = {
       company: {},
-      metadata: null
+      metadata: {
+        latestPrice: 0.00
+      }
     };
 
     this.handleSymbolSearch = this.handleSymbolSearch.bind(this);
@@ -51,7 +53,7 @@ class Home extends React.Component {
     if (this.state.metadata) {
       return (
         <div>
-          <Header company={this.state.company} handleSubmit={this.handleSymbolSearch}/>
+          <Header company={this.state.company} metadata={this.state.metadata} handleSubmit={this.handleSymbolSearch}/>
           <Metadata company={this.state.company} metadata={this.state.metadata}/>
         </div>
       );

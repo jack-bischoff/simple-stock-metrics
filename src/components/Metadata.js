@@ -12,9 +12,8 @@ class Metadata extends React.Component {
 
   render() {
     return (
-      <div className="uk-section uk-section-default uk-padding-remove-top">
+      <div className="uk-section uk-section-muted">
         <div className="uk-container">
-          <h2 className="text-highlighted">{'$'}{this.props.metadata.latestPrice}</h2>
           <div className="uk-grid-divider uk-flex-center uk-text-center uk-grid-large" data-uk-grid>
               <div>
                   <h3 className="">{'Open'}</h3>
